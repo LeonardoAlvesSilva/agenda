@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista de Contatos</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+</head>
+<body>
+<H1>Lista de Contatos</H1>
+
+<div class="container">
+	<table class="table">
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>E-mail</th>
+			<th>Endereco</th>
+			<th>Telefone</th>
+		</tr>
+		
+		<c:forEach var="pessoa" items="${contatos}">
+		<tr>
+			<td>${pessoa.id}</td>	
+			<td>${pessoa.nome}</td>	
+			<td>${pessoa.email}</td>
+			<td>${pessoa.endereco}</td>
+			<td>${pessoa.telefone}</td>
+			<td> <a href="remover-contatos?id=${pessoa.id}" class="btn btn-danger">Remover</a> </td>
+			
+		</tr>
+		</c:forEach>
+	</table>
+</div>
+
+</body>
+</html>

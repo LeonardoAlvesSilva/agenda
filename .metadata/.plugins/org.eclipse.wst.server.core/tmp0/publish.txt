@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu May 09 21:47:42 BRT 2019
+org.eclipse.jst.jee.server\:java-agenda=C\:\\apache-tomcat-7.0.93\\wtpwebapps\\java-agenda
+org.eclipse.jst.jee.server\:Nova\ pasta\ (2)=C\:\\apache-tomcat-7.0.93\\wtpwebapps\\Nova pasta (2)
