@@ -16,7 +16,19 @@ public class CadastraUsuarioServlet extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+				
+		request.setCharacterEncoding("UTF-8");
 		Pessoa pessoa = new Pessoa();
+		
+		if(null != request.getParameter("id") &&
+				!request.getParameter("id").equals("") )
+	
+			service.alterar(pessoa);
+		
+		pessoa.setId(Long.parseLong(request.getParameter("id")));
+		
+	} else {
+		service.cadastra(pessoa);
 		
 
 

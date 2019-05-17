@@ -32,4 +32,9 @@ public class CadastraUsuarioService {
 		PessoaDAO dao = new PessoaDAO();
 		dao.remove(pessoa);
 	}
+	
+	public void alterar(Pessoa pessoa) {
+		PessoaDAO dao = new PessoaDAO();
+		dao.alterar(pessoa);
+	}
 }
