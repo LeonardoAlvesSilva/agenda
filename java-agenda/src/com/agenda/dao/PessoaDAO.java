@@ -55,7 +55,7 @@ public class PessoaDAO {
 				Pessoa pessoa = new Pessoa();
 				pessoa.setId(rs.getLong("id"));
 				pessoa.setNome(rs.getString("nome"));
-				pessoa.setEmail(rs.getString("email"));
+				pessoa.setEmail(rs.getString("email") );
 				pessoa.setEndereco(rs.getString("endereco"));
 				pessoa.setTelefone(rs.getString("telefone"));
 				pessoas.add(pessoa);

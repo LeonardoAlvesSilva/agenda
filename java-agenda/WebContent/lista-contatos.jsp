@@ -32,7 +32,7 @@
 			<td>${pessoa.endereco}</td>
 			<td>${pessoa.telefone}</td>
 			<td> <a href="remover-contatos?id=${pessoa.id}" class="btn btn-danger">Remover</a> </td>
-			<td> <a href="adiciona-contato.jsp?id=${pessoa.id}&name=${pessoa.nome}&email${pessoa.email}&endereco${pessoa.endereco}&telefone${pessoa.telefone}" class="btn btn-primary">Editar</a> </td>
+			<td> <a href="adiciona-contato.jsp?id=${pessoa.id}&nome=${pessoa.nome}&email=${pessoa.email}&endereco=${pessoa.endereco}&telefone=${pessoa.telefone}" class="btn btn-primary">Editar</a> </td>
 		</tr>
 		
 		</c:forEach>
