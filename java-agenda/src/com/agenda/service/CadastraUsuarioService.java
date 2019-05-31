@@ -6,35 +6,27 @@ import com.agenda.dao.PessoaDAO;
 import com.agenda.model.Pessoa;
 
 public class CadastraUsuarioService {
+	
+	private PessoaDAO dao = new PessoaDAO();
 
-	public void cadastra(Pessoa pessoa) {
-		
-		
-		PessoaDAO canal = new PessoaDAO();
-		
-		canal.cadastro(pessoa);
-		
-		System.out.println(buscaPessoas());
-		
+	public void cadastraOuAlterar(Pessoa pessoa) {
+		if(0 != pessoa.getId()) {
+			this.alterar(pessoa);
+		}else {
+			this.dao.cadastro(pessoa);
+		}
 	}
+		
 	
 	public List<Pessoa> buscaPessoas() {
-		
-		PessoaDAO dao = new PessoaDAO();
-		
-		dao.buscaPessoas();
-		
-		return dao.buscaPessoas();
-		
-	}
+		return this.dao.buscaPessoas();
+		}
 
 	public void removeContato(Pessoa pessoa) {
-		PessoaDAO dao = new PessoaDAO();
 		dao.remove(pessoa);
 	}
 	
 	public void alterar(Pessoa pessoa) {
-		PessoaDAO dao = new PessoaDAO();
-		dao.alterar(pessoa);
+		this.dao.alterar(pessoa);
 	}
 }

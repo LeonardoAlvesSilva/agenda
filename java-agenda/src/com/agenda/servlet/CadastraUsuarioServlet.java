@@ -31,10 +31,10 @@ public class CadastraUsuarioServlet extends HttpServlet {
 		if (null != request.getParameter("id") && !request.getParameter("id").equals("")) {
 
 			pessoa.setId(Long.parseLong(request.getParameter("id")));
-			service.alterar(pessoa);
-		} else {
-			service.cadastra(pessoa);
+			
 		}
+		service.cadastrarOuAlterar(pessoa);
+		
 		response.sendRedirect("busca-contatos");
 
 	}
